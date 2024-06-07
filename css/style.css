@@ -1,0 +1,557 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Sans-serif;
+    width: 100%;
+    height: 100vh;
+    scrollbar-width: 0px;
+}
+
+/* Ajustes de posição e tamanho da logo */
+.logo{
+    width: 210px;
+    height: 130px;
+}
+
+:root {
+	--bgcolor: rgb(92, 225, 230);
+}
+
+header{
+    background-color: #5ce1e6;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+#nav {
+	  list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    justify-content: center;  
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+li .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header .nav-link a {
+  color: black;
+}
+
+#h1 {
+	font-size: 1.2rem;
+	position: relative;
+	text-transform: uppercase;
+	transition: all 300ms ease;
+	cursor: pointer;
+  margin: 20px;
+  font-family:'Lucida Sans';
+  font-style: italic;
+  height: 100%; 
+  text-decoration: none;
+  list-style: none;  
+}
+#h1:hover {
+	transform: skew(10deg);
+}
+#h1::before {
+	content: attr(data-name);
+	position: absolute;
+	top: 0;
+	background: var(--bgcolor);
+	height: 3rem;
+	overflow: hidden;
+	transition: all 300ms ease;
+}
+#h1:hover::before {
+	top: -3px;
+	left: 0px;
+	color: #111;
+}
+
+#h1::after {
+	content: "";
+	height: 2px;
+	width: 0;
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	background: #F5F7FA;
+	transition: all 300ms ease;
+}
+#h1:hover::after {
+	width: 120%;
+	outline: 3px solid rgb(2, 0, 36);
+}
+
+.carousel-inner img{
+  height: 650px;
+  background-size: cover;
+
+}
+
+.carousel{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.btn_banner{
+    /* background: url(Banner4.jpeg) no-repeat center center/cover; */
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .Banner1 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+} */
+
+/* Ajuste de texto no banner */
+
+
+/* BUTÂOOO */
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #8e8b8b;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px;
+  border-radius: 5%;
+  font-style: italic;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #5ce1e6;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 5%;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #5ce1e6;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+
+
+/* Ajuste dos textos apresentando a consultoria */
+#Titulo, #Titulo2 {
+  --s: 0.1em;
+  --c: #f0f0f0; 
+  
+  color: #0000;
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 50% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+#Titulo:hover, #Titulo2:hover {--_p: 100%}
+
+#Titulo h1, #Titulo2 h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.textos_caixa{
+  background-color:#5ad7e9;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  /* border-top: solid 5px black;
+  border-bottom: solid 5px black; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.Textos, .Textos2{
+    display: grid;
+    grid-template-columns: 35% 35%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Ajuste fino dos títulos e parágrafos dos textos */
+.Textos h1, .Textos2 h1{
+    text-align: left;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: bold;
+}
+
+.Sobre_nos{
+  border: solid 2px black;
+  border-radius: 20px;
+  height: 100%;
+}
+.Trabalhos{
+  border: solid 2px black;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.Textos article, .Textos2 article{
+    font-size: 18px;
+    text-align:left;
+    line-height: 25px;
+    font-family:'Segoe UI';
+    padding: 10px;  
+}
+
+/* Ajuste de imagens dos textos */
+.img1, .img2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img1 img, .img2 img{
+  height: 300px;
+  width: 400px;
+  width: 100%;
+}
+
+/* Distância entre os textos e os serviços */
+.Serviços{
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.t_services{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Serviços h1{
+  font-weight: bold;
+  text-align: center;
+  color: #5ce1e6;
+  font-size: 40px;
+  transition: 0.5s ease-in-out;
+  padding: 50px;
+}
+
+.Serviços h1:hover{
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 1px;
+  transition: 0.5s ease-in-out;
+}
+
+/* Caixa de Serviços empresas */
+.Serviços_box{
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-right: 200px;
+  margin-left: 200px;
+  gap: 30px;
+}
+
+/* Colunas de cada serviço prestado */
+.Ger_games, .Estr_marketing, .Gestão{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 3px #5ce1e6;
+  border-radius: 12px;
+  transition: 0.5s ease-in-out;
+}
+
+ .Ger_games:hover, .Estr_marketing:hover, .Gestão:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+} 
+
+
+/* Ajuste fino correção de erros de Posicionamento */
+
+/* Ajuste tamanho das imagens */
+#Metas, #Marketing {
+    width: 20%;   
+}
+
+#Desenvolvimento{
+    width: 15%;
+}
+
+#Marketing_title, #Des_title, #Metas_title{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.Gestão h2{
+  padding-top: -100px;
+}
+
+.Ger_games p, .Estr_marketing p, .Gestão p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+/* Botão Especialista */
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;  
+}
+.button button{
+  width: 500px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #5ce1e6;
+  text-align: center;
+  transition: 0.5s ease-in-out;  
+}
+.button button a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-family: 'Arial';
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  width: 500px;
+  height: 50px;
+  transition: 0.5s ease-in-out;   
+  color: #f0f0f0;
+}
+.button:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+/* casos de sucesso */
+
+.casos_caixa .casos_title{
+  text-align: center;
+  padding-top:120px;
+}
+
+.casos_caixa .casos_title #title_color{
+  color: #5ce1e6;
+  font-weight: bold;
+}
+
+.casos_de_sucesso1, .casos_de_sucesso2{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.casos_de_sucesso1{
+  grid-template-columns: 20% 20% 20% 20%;
+}
+
+.casos_de_sucesso2{
+  grid-template-columns: 20% 20% 20%;
+}
+
+.casos_caixa img{
+  width: 300px;
+  height: 300px;
+}
+
+
+
+/* FOOTER */
+
+  .footer {
+    z-index: 1;
+    --footer-background:#5ce1e6;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+    margin-top: 200px;
+  }
+   .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+  }
+   .footer .content {
+    z-index: 2;
+    padding: 2rem;
+    background: var(--footer-background);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 33% 33% 33%;
+    gap: 40px;
+  }
+  .footer .content .direitos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer .content .nav2 ,.footer .content .redes_sociais{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer .content .nav2 a{
+    width: min-content;
+  }
+
+  .footer .content .redes_sociais{
+    width: 90%;
+  }
+  
+   .footer .content a, body .footer .content p, .footer .content h1 {
+    color: #F5F7FA;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .footer .content h1{
+    font-size: 25px;
+  }
+  .redes_sociais a{
+    width: min-content;
+  }
+  #icon{
+    width: 20px;
+  }
+  #direitos_r{
+    font-size: 12px;
+  }
+
+  .hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+  }
+  
+  .hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+  }
+
+ 
+  @-webkit-keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
+    }
+    100% {
+      width: 0rem;
+      height: 0rem;
+    }
+  }
+  
+  @keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
+    }
+    100% {
+      width: 0rem;
+      height: 0rem;
+    }
+  }
+  @-webkit-keyframes bubble-move {
+    0% {
+      bottom: -4rem;
+    }
+    100% {
+      bottom: var(--distance, 10rem);
+    }
+  }
+  @keyframes bubble-move {
+    0% {
+      bottom: -4rem;
+    }
+    100% {
+      bottom: var(--distance, 10rem);
+    }
+  }
+
